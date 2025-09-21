@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lawyers Management</title>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    
+  <div class="sidebar-header">Dashboard</div>
+  <nav>
+    <ul>
+      <li id="nav-overview"><a href="index.html">Overview</a></li>
+      <li id="nav-lawyers"><a href="lawyers.html">Lawyers</a></li>
+      <li id="nav-users"><a href="users.html">Users</a></li>
+      <li id="nav-appointments"><a href="appointments.html">Appointments</a></li>
+      <li id="nav-documents"><a href="documents.html">Documents</a></li>
+      <li id="nav-settings"><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+
+  </aside>
+  <main>
+    <header class="main-header">
+    <h1>Lawyers Management</h1>
+    <button onclick="showLawyerModal()">+ Add Lawyer</button>
+  </header>
+  <input type="text" id="searchInput" placeholder="Search lawyers..." oninput="searchLawyers()" />
+  <div class="filter-btns">
+    <button onclick="filterLawyers('all')">All</button>
+    <button onclick="filterLawyers('pending')">Pending</button>
+    <button onclick="filterLawyers('approved')">Approved</button>
+    <button onclick="filterLawyers('rejected')">Rejected</button>
+  </div>
+  <div id="lawyersList"></div>
+  <div id="lawyerModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h2 id="modalTitle">Add Lawyer</h2>
+      <input id="lawyerName" placeholder="Name" type="text">
+      <input id="lawyerEmail" placeholder="Email" type="email">
+      <input id="lawyerBarNumber" placeholder="Bar Number" type="text">
+      <input id="lawyerSpecialization" placeholder="Specialization" type="text">
+      <input id="lawyerExperience" placeholder="Experience (years)" type="number">
+      <input id="lawyerRegistrationDate" type="date" placeholder="Registered">
+      <select id="lawyerStatus">
+        <option value="pending">Pending</option>
+        <option value="approved">Approved</option>
+        <option value="rejected">Rejected</option>
+      </select>
+      <button onclick="saveLawyer()">Save</button>
+      <button onclick="closeLawyerModal()">Cancel</button>
+    </div>
+  </div>
+  </main>
+  <script src="app.js"></script>
+  <script src="lawyers.js"></script>
+</body>
+</html>

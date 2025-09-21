@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar"> 
+
+  <div class="sidebar-header">Dashboard</div>
+  <nav>
+    <ul>
+      <li id="nav-overview"><a href="index.html">Overview</a></li>
+      <li id="nav-lawyers"><a href="lawyers.html">Lawyers</a></li>
+      <li id="nav-users"><a href="users.html">Users</a></li>
+      <li id="nav-appointments"><a href="appointments.html">Appointments</a></li>
+      <li id="nav-documents"><a href="documents.html">Documents</a></li>
+      <li id="nav-settings"><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+  </aside>
+  <main>
+    <header class="main-header">
+      <h1>Appointments</h1>
+      <button class="primary-btn">+ New Appointment</button>
+    </header>
+    <section class="dashboard-cards">
+      <div class="card"><span>Today's Appointments</span><h2>8</h2></div>
+      <div class="card"><span>This Week</span><h2>24</h2></div>
+      <div class="card"><span>Pending Confirmation</span><h2>5</h2></div>
+    </section>
+    <section class="appointments-list">
+      <input class="search-bar" type="text" placeholder="Search appointments...">
+      <div class="appointment-card confirmed">
+        <span>John Doe</span>
+        <span>Confirmed</span>
+        <span>Consultation</span>
+        <span>2024-01-20 10:00 AM Office Room A</span>
+        <button>Edit</button>
+        <button>Cancel</button>
+        <button class="primary-btn">Confirm</button>
+      </div>
+      <div class="appointment-card pending">
+        <span>Jane Smith</span>
+        <span>Pending</span>
+        <span>Contract Review</span>
+        <span>2024-01-20 2:30 PM Virtual Meeting</span>
+        <button>Edit</button>
+        <button>Cancel</button>
+        <button class="primary-btn">Confirm</button>
+      </div>
+      <div class="appointment-card confirmed">
+        <span>Bob Johnson</span>
+        <span>Confirmed</span>
+        <span>Court Preparation</span>
+        <span>2024-01-21 11:15 AM Office Room B</span>
+        <button>Edit</button>
+        <button>Cancel</button>
+        <button class="primary-btn">Confirm</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

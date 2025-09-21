@@ -1,0 +1,24 @@
+.dashboard-analytics {
+  display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;
+}
+.analytic-card {
+  background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(42, 59, 85, 0.06);
+  display: flex; align-items: center; gap: 1rem; padding: 1.5rem; min-width: 180px;
+  flex: 1;
+}
+.analytic-card .icon {
+  font-size: 2rem; margin-right: .7rem;
+}
+.analytic-card h3 { margin: 0; font-size: 2rem; color: #4073f3;}
+.analytic-card p { margin: 0; color: #999;}
+@media (max-width: 800px) { .dashboard-analytics { flex-direction: column; } }
+
+
+.auth-container {
+  margin: 120px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px #e1e7ef;
+  width: 340px; max-width: 92vw; padding: 2rem; display: flex; flex-direction: column; gap:1rem;
+}
+input {padding: 10px; border: 1px solid #eee; border-radius: 5px; font-size: 16px;}
+button {background: #4073f3; color: #fff; border: none; border-radius: 7px; padding: 10px; cursor: pointer;}
+#errorMsg {color: #e3285c;}
+a {text-align:right; color: #4073f3; margin-top: 7px;}

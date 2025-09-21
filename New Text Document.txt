@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lawyers Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <!-- Same sidebar as dashboard -->
+  </aside>
+  <main>
+    <header class="main-header">
+      <h1>Lawyers Management</h1>
+    </header>
+    <section class="search-section">
+      <input class="search-bar" type="text" placeholder="Search lawyers by name, email or specialization...">
+      <div class="filter-btns">
+        <button>All (4)</button>
+        <button>Pending (2)</button>
+        <button>Approved (1)</button>
+      </div>
+    </section>
+    <section class="lawyers-list">
+      <div class="lawyer-card pending">
+        <h4>Sarah Johnson (Pending)</h4>
+        <p>Corporate Law, 8 years</p>
+        <small>Registered: 15/01/2024</small>
+        <button>Review</button>
+        <button class="approve-btn">Approve</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+      <div class="lawyer-card approved">
+        <h4>Michael Chen (Approved)</h4>
+        <p>Criminal Defense, 12 years</p>
+        <small>Registered: 20/01/2024</small>
+        <button>Review</button>
+        <button disabled class="approve-btn">Approved</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+      <div class="lawyer-card pending">
+        <h4>Emily Rodriguez (Pending)</h4>
+        <p>Family Law, 6 years</p>
+        <small>Registered: 20/01/2024</small>
+        <button>Review</button>
+        <button class="approve-btn">Approve</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+      <div class="lawyer-card rejected">
+        <h4>David Thompson (Rejected)</h4>
+        <p>Intellectual Property, 5 years</p>
+        <small>Registered: 18/01/2024</small>
+        <button>Review</button>
+        <button disabled class="approve-btn">Rejected</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  
+  
+<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-analytics-compat.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-auth.js"></script>
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+  <div class="sidebar-header">LEGALNECT</div>
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <nav>
+    <ul>
+      <li id="nav-overview"><a href="index.html">Overview</a></li>
+      <li id="nav-lawyers"><a href="lawyers.html">Lawyers</a></li>
+      <li id="nav-users"><a href="users.html">Users</a></li>
+      <li id="nav-appointments"><a href="appointments.html">Appointments</a></li>
+      <li id="nav-documents"><a href="documents.html">Documents</a></li>
+      <li id="nav-settings"><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+</aside>
+  <main>
+    <header class="main-header">
+      <h1>Admin Dashboard</h1>
+      <div class="header-actions">
+        <button class="search-btn">🔍</button>
+        <button class="profile-btn">👤</button>
+      </div>
+    </header>
+    <section class="grid-cards">
+  <a href="lawyers.html" class="card-link">
+    <div class="card">
+      <h4>Lawyers</h4>
+      <p>24</p>
+    </div>
+  </a>
+  <a href="users.html" class="card-link">
+    <div class="card">
+      <h4>Users</h4>
+      <p>156</p>
+    </div>
+  </a>
+  <a href="appointments.html" class="card-link">
+    <div class="card">
+      <h4>Appointments</h4>
+      <p>12</p>
+    </div>
+  </a>
+  <a href="appointments.html" class="card-link">
+    <div>
+      <h4 class="card">Pending</h4>
+      <p>8</p>
+    </div>
+  </a>
+</section>
+
+<!--<section>
+
+  <div class="dashboard-analytics">
+  <div class="analytic-card"><span class="icon">👤</span> <div>
+    <h3 id="totalUsers">156</h3><p>Total Users</p>
+  </div></div>
+  <div class="analytic-card"><span class="icon">📅</span> <div>
+    <h3 id="monthlyAppointments">24</h3><p>Appointments (This Month)</p>
+  </div></div>
+  <div class="analytic-card"><span class="icon">📄</span> <div>
+    <h3 id="totalOrders">89</h3><p>Orders</p>
+  </div></div>
+  <div class="analytic-card"><span class="icon">✅</span> <div>
+    <h3 id="approvedLawyers">24</h3><p>Approved Lawyers</p>
+  </div></div>
+</div>
+</section>-->
+    <section class="panel-section">
+      <div class="panel">
+        <div>
+          <h3>Document Orders</h3>
+          <p>Manage all document requests and orders</p>
+        </div>
+        <button class="primary-btn">Manage Document Orders</button>
+      </div>
+      <div class="panel">
+        <div>
+          <h3>Define Trends</h3>
+          <p>Track and define platform trends</p>
+        </div>
+        <button class="primary-btn">Manage Define Trends</button>
+      </div>
+    </section>
+    
+  </main>
+  <script src="app.js"></script>
+
+  <script>
+firebase.auth().onAuthStateChanged(function(user) {
+  if (!user || !ADMIN_EMAILS.includes(user.email)) {
+    firebase.auth().signOut();
+    window.location.href = "login.html";
+  }
+});
+</script>
+</body>
+</html>

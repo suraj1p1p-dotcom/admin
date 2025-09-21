@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Forgot Admin Password</title>
+  <link rel="stylesheet" href="login-style.css"/>
+  <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js" type="module"></script>
+  <script src="firebase.js" type="module" defer></script>  <!-- Make sure firebase.js is correctly linked -->
+  
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Forgot Password</h2>
+    <input id="email" type="email" placeholder="Admin Email" />
+    <button onclick="resetPassword()">Reset Password</button>
+    <div id="errorMsg" style="color: red;"></div> <!-- For error messages -->
+    <div id="successMsg" style="color: green;"></div> <!-- For success messages -->
+    <a href="login.html">Back to Login</a>
+  </div>
+
+  <!--script src="forgot.js" type="module">
+   
+      </script-->
+</body>
+</html>
