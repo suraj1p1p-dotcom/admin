@@ -6,14 +6,13 @@ console.log("hello");
 console.log("hello");
   // Initialize Firebase (fill with your project details)
   const firebaseConfig = {
-     apiKey: "AIzaSyC9vEXTqtR4s6n1_IU9lOsZqjyTBVftq6o",
-  authDomain: "united-b0e49.firebaseapp.com",
-  databaseURL: "https://united-b0e49-default-rtdb.firebaseio.com",
-  projectId: "united-b0e49",
-  storageBucket: "united-b0e49.firebasestorage.app",
-  messagingSenderId: "397316084824",
-  appId: "1:397316084824:web:7a6f514f664c5cefa7a62d",
-  measurementId: "G-7CER6QJHCL"
+    apiKey: "AIzaSyDs48nwFu3AjI5QeVizu5frTLFIyIMrFQQ",
+    authDomain: "legalnect-af122.firebaseapp.com",
+    projectId: "legalnect-af122",
+    storageBucket: "legalnect-af122.firebasestorage.app",
+    messagingSenderId: "162103091508",
+    appId: "1:162103091508:web:b879f704fdd220f5dc0561",
+    measurementId: "G-QEQN6FCPSL"
   };
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
@@ -61,6 +60,7 @@ document.querySelectorAll('.sidebar nav ul li').forEach(item => {
 function toggleSidebar() {
   document.querySelector('.sidebar').classList.toggle('active');
 }
+
 
 
 
